@@ -1,5 +1,6 @@
-.dough-container {
+.ingredient-container {
     width: 90vw;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }

@@ -1,13 +1,27 @@
 .tile {
-    height: 300px;
-    width: 300px;
-    background: lightgrey;
+    height: 150px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 10px 10px 5px grey;
+    background: lightgrey;
+    
 }
 
 .tile:hover {
     cursor: pointer;
+    box-shadow: 15px 15px 10px grey;
+}
+
+.plus {
+    width: 30px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
