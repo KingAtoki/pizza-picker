@@ -1,8 +1,13 @@
 .tile {
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     background: lightgrey;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.tile:hover {
+    cursor: pointer;
 }
