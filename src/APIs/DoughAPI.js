@@ -3,12 +3,14 @@ export const fetchDoughs = () => {
         {
             id: 1,
             type: 'Thin Dough',
-            description: 'Thin and crusty pizza dough. Comes with Tomato Sauce and Cheese.'
+            description: 'Thin and crusty pizza dough. Comes with Tomato Sauce and Cheese.',
+            price: '€5.00'
         },
         {
             id: 2,
             type: 'Thick Dough',
-            description: 'Thick and soft pizza dough. Comes with Tomato Sauce and Cheese.'
+            description: 'Thick and soft pizza dough. Comes with Tomato Sauce and Cheese.',
+            price: '€5.00'
         }
     ]
 }

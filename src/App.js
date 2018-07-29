@@ -4,6 +4,8 @@ import {Route, Link} from 'react-router-dom';
 
 import Dough from './Components/RouteComponents/DoughComponent/Dough';
 import Ingredients from './Components/RouteComponents/IngredientsComponents/Ingredients';
+import Review from './Components/RouteComponents/ReviewComponent/Review'
+
 
 
 class App extends Component {
@@ -32,8 +34,8 @@ class App extends Component {
         <Link exact='true' to='/' style={{color: 'darkgreen', textDecoration: 'none'}}><h1>SME Pizza</h1></Link>
         <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza-btn'>Build Your Own Pizza</h2></Link> }/>
         <Route path='/dough' render={() => <Dough selectDough={this.selectDough} selectedDough={this.state.dough}/>}/>
-        <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients}/>}/>
-        
+        <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients} selectedIngredients={this.state.ingredients}/>}/>
+        <Route path='/review' render={() => <Review dough={this.state.dough} ingredients={this.state.ingredients}/>}/>
       </div>
     );
   }
