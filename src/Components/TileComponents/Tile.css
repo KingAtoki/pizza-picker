@@ -1,14 +1,16 @@
 .tile {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 10px 10px 5px grey;
-    background: lightgrey;
-    
+    background: khaki;
+    border: solid goldenrod 10px;
+    border-radius: 50%;
+    color: darkgreen;
 }
 
 .tile:hover {
@@ -16,10 +18,10 @@
 }
 
 .add-btn {
-    width: 75px;
-    height: 50px;
-    border-radius: 50%;
-    background: black;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background: crimson;
     color: white;
     display: flex;
     align-items: center;
@@ -28,4 +30,5 @@
 
 .add-btn:hover {
     cursor: pointer;
+    background: darkred;
 }

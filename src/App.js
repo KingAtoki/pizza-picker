@@ -33,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link exact='true' to='/' style={{color: 'black', textDecoration: 'none'}}><h1>SME Pizza</h1></Link>
+        <Link exact='true' to='/' style={{color: 'darkgreen', textDecoration: 'none'}}><h1>SME Pizza</h1></Link>
         <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza-btn'>Build Your Own Pizza</h2></Link> }/>
         <Route path='/dough' render={() => <Dough selectDough={this.selectDough} />}/>
         <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients}/>}/>
