@@ -1,43 +1,35 @@
 export const fetchIngredients = () => {
     return [
-        {
+       {
             id: 1,
-            type: 'Rich Tomato Sauce',
-        },
-        {
-            id: 2,
-            type: 'Cheese'
-        },
-        {
-            id: 3,
             type: 'Pepperoni'
         },
         {
-            id: 4,
+            id: 2,
             type: 'Beef'
         },
         {
-            id: 5,
+            id: 3,
             type: 'Ham'
         },
         {
-            id: 6,
+            id: 4,
             type: 'Bacon'
         },
         {
-            id: 7,
+            id: 5,
             type: 'Onions'
         },
         {
-            id: 8,
+            id: 6,
             type: 'Mushrooms'
         },
         {
-            id: 9,
+            id: 7,
             type: 'Hot Peppers'
         },
         {
-            id: 10,
+            id: 8,
             type: 'Pineapples'
         },
     ]
