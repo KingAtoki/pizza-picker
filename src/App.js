@@ -12,13 +12,15 @@ class App extends Component {
     ingredients: []
   }
 
+  componentDidMount() {
+    this.setState({dough: '', ingredients: []});
+  }
+
   selectDough = (name, type) => {
     this.setState({[name]: type});
   }
 
   selectIngredients = (type) => {
-    console.log(type);
-    console.log(this.state.ingredients);
     if (this.state.ingredients.includes(type)) {
       let ingredients = this.state.ingredients;
       ingredients.splice(ingredients.indexOf(type), 1);
@@ -31,10 +33,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link exact='true' to='/' style={{color: 'black', textDecoration: 'none'}}><h1>Pizza Picker ({this.state.dough || "Pizza not Started"}{this.state.ingredients.map(ingredient => <span key={ingredient}>, {ingredient}</span>)})</h1></Link>
-        <Route exact path='/' render={() => <h2><Link to='/dough'>Get Started</Link></h2> }/>
-        <Route path='/dough' render={() => <div><Dough selectDough={this.selectDough} selectedDough={this.state.dough}/><Link to='/ingredients' style={{color: 'black', textDecoration: 'none'}}><h2>Ingredients</h2></Link></div>}/>
-        <Route path='/ingredients' render={() => <Ingredients selectedIngredients={this.state.ingredients} selectIngredients={this.selectIngredients}/>}/>
+        <Link exact='true' to='/' style={{color: 'black', textDecoration: 'none'}}><h1>SME Pizza</h1></Link>
+        <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza-btn'>Build Your Own Pizza</h2></Link> }/>
+        <Route path='/dough' render={() => <Dough selectDough={this.selectDough} />}/>
+        <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients}/>}/>
+        
       </div>
     );
   }

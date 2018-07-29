@@ -12,7 +12,7 @@ export default (props) => {
   const ingredients = fetchIngredients();
   return (
     <div className='ingredient-container'>
-      {ingredients.map(ingredient => <Tile kind='ingredient' key={ingredient.id} id={ingredient.id} type={ingredient.type} selectedIngredients={props.selectedIngredients} selectIngredients={props.selectIngredients}/>)}
+      {ingredients.map(ingredient => <Tile kind='ingredient' key={ingredient.id} id={ingredient.id} type={ingredient.type} selectIngredients={props.selectIngredients}/>)}
     </div>
   )
 }
