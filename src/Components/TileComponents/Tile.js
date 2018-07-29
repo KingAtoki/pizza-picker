@@ -5,10 +5,9 @@ export default (props) => {
   return (
     <div className='tile'>
       <h2>{props.type}</h2>
-      <h4>{props.description || null}</h4>
-      {props.kind === 'ingredient' ? <h4>€0.50</h4> : null}
-      {props.kind === 'ingredient' ? <div className='add-btn' onClick={() => props.selectIngredients(props.type)}>Add</div> : null}
-      {props.kind === 'dough' ? <div className='add-btn' onClick={() => props.selectDough('dough', props.type)}>Add</div> : null}
+      <h4>{props.description}</h4>
+      <h4>€5.00</h4>
+      {props.selectedDough === props.type ? <div className='added-btn' onClick={() => props.selectDough('dough', props.type)}>Added</div> : <div className='add-btn' onClick={() => props.selectDough('dough', props.type)}>Add</div>}
     </div>
   )
 }

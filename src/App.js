@@ -8,14 +8,10 @@ import Ingredients from './Components/RouteComponents/IngredientsComponents/Ingr
 
 class App extends Component {
   state = {
-    dough: '',
+    dough: 'Thin Dough',
     ingredients: []
   }
-
-  componentDidMount() {
-    this.setState({dough: '', ingredients: []});
-  }
-
+  
   selectDough = (name, type) => {
     this.setState({[name]: type});
   }
@@ -35,7 +31,7 @@ class App extends Component {
       <div className="App">
         <Link exact='true' to='/' style={{color: 'darkgreen', textDecoration: 'none'}}><h1>SME Pizza</h1></Link>
         <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza-btn'>Build Your Own Pizza</h2></Link> }/>
-        <Route path='/dough' render={() => <Dough selectDough={this.selectDough} />}/>
+        <Route path='/dough' render={() => <Dough selectDough={this.selectDough} selectedDough={this.state.dough}/>}/>
         <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients}/>}/>
         
       </div>
