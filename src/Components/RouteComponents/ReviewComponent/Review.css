@@ -1,0 +1,13 @@
+.order_ticket {
+    width: 50vw;
+    height: 60vh;
+    background: wheat;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 10px;
+    padding: 1.1rem;
+    font-size: 1.6rem;
+}
+
+.order_btn:hover {
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, Redirect} from 'react-router-dom';
 
 import Dough from './Components/RouteComponents/DoughComponent/Dough';
 import Ingredients from './Components/RouteComponents/IngredientsComponents/Ingredients';
@@ -28,6 +28,15 @@ class App extends Component {
     }
   }
 
+  submit = () => {
+    /**
+     * Will POST to backend with as an object
+     */
+    //let order = {dough: this.state.dough, ingredients: this.state.ingredients, price: 5 + (0.5 * this.state.ingredients.length)};
+    alert(`Order placed successfully!`);
+    this.setState({dough: 'Thin Dough', ingredients: []});
+  }
+
   render() {
     return (
       <div className="App">
@@ -35,7 +44,7 @@ class App extends Component {
         <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza-btn'>Build Your Own Pizza</h2></Link> }/>
         <Route path='/dough' render={() => <Dough selectDough={this.selectDough} selectedDough={this.state.dough}/>}/>
         <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients} selectedIngredients={this.state.ingredients}/>}/>
-        <Route path='/review' render={() => <Review dough={this.state.dough} ingredients={this.state.ingredients}/>}/>
+        <Route path='/review' render={() => <Review dough={this.state.dough} ingredients={this.state.ingredients} submit={this.submit}/>}/>
       </div>
     );
   }

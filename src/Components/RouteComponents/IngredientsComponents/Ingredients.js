@@ -16,7 +16,7 @@ export default (props) => {
     <div>
       <div className='ingredient-container'>
         {ingredients.map(ingredient => <div key={ingredient.id}><IngredientTile kind='ingredient' type={ingredient.type} price={ingredient.price} selectIngredients={props.selectIngredients} selectedIngredients={props.selectedIngredients}/><hr /></div>)}
-        <div>
+        <div style={{display: 'flex', justifyContent: 'space-around'}}>
           <Link to='/dough' style={{color: 'crimson', textDecoration: 'none'}}><h2>Back to Dough</h2></Link>
           <Link to='/review' style={{color: 'darkgreen', textDecoration: 'none'}}><h2>Review My Order</h2></Link>
         </div>
