@@ -18,7 +18,7 @@
     box-shadow: 15px 15px 10px grey;
 }
 
-.add-btn {
+.add-dough-btn {
     width: 100px;
     height: 35px;
     border-radius: 10px;
@@ -29,7 +29,7 @@
     justify-content: center;
 }
 
-.add-btn:hover {
+.add-dough-btn:hover {
     cursor: pointer;
     background: darkred;
 }

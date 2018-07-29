@@ -1,5 +1,6 @@
 import React from 'react'
-import Tile from '../../TileComponents/Tile';
+import IngredientTile from '../../IngredientTileComponent/IngredientTile'
+
 
 import './Ingredients.css';
 
@@ -12,7 +13,7 @@ export default (props) => {
   const ingredients = fetchIngredients();
   return (
     <div className='ingredient-container'>
-      {ingredients.map(ingredient => <p kind='ingredient' key={ingredient.id} id={ingredient.id} type={ingredient.type} selectIngredients={props.selectIngredients}>{ingredient.type}</p>)}
+      {ingredients.map(ingredient => <div><IngredientTile kind='ingredient' key={ingredient.id} id={ingredient.id} type={ingredient.type} selectIngredients={props.selectIngredients} /><hr /></div>)}
     </div>
   )
 }

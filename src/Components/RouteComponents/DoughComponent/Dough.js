@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Tile from '../../TileComponents/Tile';
+import DoughTile from '../../DoughTileComponents/DoughTile';
 
 import './Dough.css';
 
@@ -15,7 +15,7 @@ export default (props) => {
   return (
     <div>
       <div className='dough-container'>
-        {doughs.map(dough => <Tile key={dough.id} type={dough.type} description={dough.description} selectDough={props.selectDough} selectedDough={props.selectedDough}/>)}
+        {doughs.map(dough => <DoughTile key={dough.id} type={dough.type} description={dough.description} selectDough={props.selectDough} selectedDough={props.selectedDough}/>)}
       </div>
       <Link to='/ingredients' style={{color: 'crimson', textDecoration: 'none'}}><h2>Add Ingredients</h2></Link>
     </div>

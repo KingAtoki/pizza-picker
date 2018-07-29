@@ -1,0 +1,19 @@
+.ingredient-tile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    font-size: 2.2rem;
+}
+
+.add-ingredient-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: lightgrey;
+    color: grey;
+    font-size: 1.5rem;
+}
