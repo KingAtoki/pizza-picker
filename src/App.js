@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Route, Link, Redirect} from 'react-router-dom';
+import {Route, Link} from 'react-router-dom';
 
 import Dough from './Components/RouteComponents/DoughComponent/Dough';
 import Ingredients from './Components/RouteComponents/IngredientsComponents/Ingredients';
