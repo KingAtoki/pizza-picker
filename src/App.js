@@ -10,7 +10,7 @@ import Review from './Components/RouteComponents/ReviewComponent/Review'
 
 class App extends Component {
   state = {
-    dough: 'Thin Dough',
+    dough: '',
     ingredients: []
   }
   
