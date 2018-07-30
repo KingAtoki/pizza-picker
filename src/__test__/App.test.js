@@ -12,13 +12,9 @@ describe('<App />', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find(Route)).toHaveLength(4);
   });
-  it('Should initially have Thin Dough selected', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.state().dough).toEqual('Thin Dough');
-  });
   it('Should change the dough to the selected dough', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.state().dough).toEqual('Thin Dough');
+    expect(wrapper.state().dough).toEqual('');
     wrapper.instance().selectDough('dough', 'Thick Dough');
     expect(wrapper.state().dough).toEqual('Thick Dough');
   });
