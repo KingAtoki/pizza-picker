@@ -5,10 +5,6 @@ import Dough from '../Components/RouteComponents/DoughComponent/Dough'
 import DoughTile from '../Components/DoughTileComponents/DoughTile';
 import {fetchDoughs} from '../APIs/DoughAPI'
 
-import App from '../App';
-
-
-
 describe('<Dough />', () => {
     it('Should render tiles without crashing', () => {
         const wrapper = shallow(<Dough selectedDough='Thin Dough'/>);
