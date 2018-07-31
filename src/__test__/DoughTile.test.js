@@ -22,16 +22,14 @@ describe('<DoughTile />', () => {
     });
     it('should show added btn if it is selected', () => {
         const wrapper = shallow(<DoughTile selectedDough='Thin Dough' type='Thin Dough'/>);
-        const wrongDiv = wrapper.findWhere(div => div.hasClass('add-dough-btn'));
-        const rightDiv = wrapper.findWhere(div => div.hasClass('added-btn'));
-        expect(wrongDiv.length).toEqual(0);
-        expect(rightDiv.length).toEqual(1);
+        const button = wrapper.findWhere(div => div.hasClass('dough-tile__btn dough-tile__btn_added'));
+        expect(button.length).toEqual(1);
     });
     it('should add dough to state when dough is selected', () => {
         const appWrapper = shallow(<App />);
         const selectDough = appWrapper.instance().selectDough;
         const doughWrapper = shallow(<DoughTile selectDough={selectDough} selectedDough='Thin Dough' type='Thick Dough'/>);
-        const button = doughWrapper.findWhere(div => div.hasClass('add-dough-btn'));
+        const button = doughWrapper.findWhere(div => div.hasClass('dough-tile__btn'));
         button.prop('onClick')();
         expect(appWrapper.state().dough).toEqual('Thick Dough');
     });

@@ -21,7 +21,7 @@ describe('<IngredientTile />', () => {
         const appWrapper = shallow(<App />)
         const selectIngredients = appWrapper.instance().selectIngredients;
         const ingredientWrapper = shallow(<IngredientTile type='Ham' selectedIngredients={[]} selectIngredients={selectIngredients}/>);
-        const button = ingredientWrapper.findWhere(div => div.hasClass('add-ingredient-btn'));
+        const button = ingredientWrapper.findWhere(div => div.hasClass('ingredient-tile__btn'));
         button.prop('onClick')();
         expect(appWrapper.state().ingredients).toEqual(['Ham']);
     });
@@ -30,7 +30,7 @@ describe('<IngredientTile />', () => {
         appWrapper.setState({ingredients: ['Ham']})
         const selectIngredients = appWrapper.instance().selectIngredients;
         const ingredientWrapper = shallow(<IngredientTile type='Ham' selectedIngredients={['Ham']} selectIngredients={selectIngredients}/>);
-        const button = ingredientWrapper.findWhere(div => div.hasClass('added-ingredient-btn'));
+        const button = ingredientWrapper.findWhere(div => div.hasClass('ingredient-tile__btn ingredient-tile__btn_added'));
         button.prop('onClick')();
         expect(appWrapper.state().ingredients).toEqual([]);
     });
