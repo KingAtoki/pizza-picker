@@ -18,7 +18,7 @@
     box-shadow: 15px 15px 10px grey;
 }
 
-.dough-tile__btn_add {
+.dough-tile__btn {
     width: 100px;
     height: 35px;
     border-radius: 10px;
@@ -29,18 +29,11 @@
     justify-content: center;
 }
 
-.dough-tile__btn_add:hover {
+.dough-tile__btn:hover {
     cursor: pointer;
     background: darkred;
 }
 
 .dough-tile__btn_added {
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
     background: darkred;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

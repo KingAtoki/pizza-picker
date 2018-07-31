@@ -6,7 +6,7 @@
     font-size: 2.2rem;
 }
 
-.ingredient-tile__btn_add {
+.ingredient-tile__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,20 +18,13 @@
     font-size: 1.5rem;
 }
 
-.ingredient-tile__btn_add:hover {
+.ingredient-tile__btn:hover {
     cursor: pointer;
 }
 
 .ingredient-tile__btn_added {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
     background: crimson;
     color: black;
-    font-size: 1.5rem;
 }
 
 .ingredient-tile__btn_added:hover {

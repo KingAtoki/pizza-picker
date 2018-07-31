@@ -2,20 +2,23 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './Review.css';
 
+// Changing the ingredients array into a string
+const formatIngredients = (ingredientsArray) => {
+    return ingredientsArray.reduce((acc, cur) => {
+        if (cur === ingredientsArray[0]) {
+            return acc = acc += cur;
+        } else if (cur === ingredientsArray[ingredientsArray.length - 1]) {
+            return acc = acc.concat(", and " + cur);
+        } else {
+            return acc = acc.concat(", " + cur);
+        }
+    }, '');
+}
+
 export default (props) => {
     let price = 5 + (0.5 * props.ingredients.length);
     let ingredients;
-    if (props.ingredients) {
-        ingredients = props.ingredients.reduce((acc, cur) => {
-            if (cur === props.ingredients[0]) {
-                return acc = acc += cur;
-            } else if (cur === props.ingredients[props.ingredients.length - 1]) {
-                return acc = acc.concat(", and " + cur);
-            } else {
-                return acc = acc.concat(", " + cur);
-            }
-        }, '');
-    }
+    if (props.ingredients) ingredients = formatIngredients(props.ingredients);
   return (
     <div>
         <div className='order-ticket__container'>

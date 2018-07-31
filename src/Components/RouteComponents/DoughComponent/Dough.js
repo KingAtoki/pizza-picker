@@ -17,6 +17,7 @@ export default (props) => {
       <div className='dough__container'>
         {doughs.map(dough => <DoughTile key={dough.id} type={dough.type} description={dough.description} price={dough.price} selectDough={props.selectDough} selectedDough={props.selectedDough}/>)}
       </div>
+      {/* Don't want to show the Add Ingredients link until the user clicks a dough*/}
       {props.selectedDough.length ? <Link to='/ingredients' style={{color: 'crimson', textDecoration: 'none'}}><h2>Add Ingredients</h2></Link> : null}
     </div>
   )
