@@ -14,7 +14,7 @@ export default (props) => {
 
   return (
     <div>
-      <div className='dough-container'>
+      <div className='dough__container'>
         {doughs.map(dough => <DoughTile key={dough.id} type={dough.type} description={dough.description} price={dough.price} selectDough={props.selectDough} selectedDough={props.selectedDough}/>)}
       </div>
       {props.selectedDough.length ? <Link to='/ingredients' style={{color: 'crimson', textDecoration: 'none'}}><h2>Add Ingredients</h2></Link> : null}

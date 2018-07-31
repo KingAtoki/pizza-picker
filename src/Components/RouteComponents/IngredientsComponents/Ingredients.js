@@ -14,7 +14,7 @@ export default (props) => {
   const ingredients = fetchIngredients();
   return (
     <div>
-      <div className='ingredient-container'>
+      <div className='ingredient__container'>
         {ingredients.map(ingredient => <div key={ingredient.id}><IngredientTile kind='ingredient' type={ingredient.type} price={ingredient.price} selectIngredients={props.selectIngredients} selectedIngredients={props.selectedIngredients}/><hr /></div>)}
         <div style={{display: 'flex', justifyContent: 'space-around'}}>
           <Link to='/dough' style={{color: 'crimson', textDecoration: 'none'}}><h2>Back to Dough</h2></Link>

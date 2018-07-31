@@ -13,11 +13,16 @@ class App extends Component {
     dough: '',
     ingredients: []
   }
-  
+
+  // sets the selected dough to state
   selectDough = (name, type) => {
     this.setState({[name]: type});
   }
 
+  /**
+   * check to see if the ingredient is already in state
+   * if it is splice it out, if not add it 
+   */
   selectIngredients = (type) => {
     if (this.state.ingredients.includes(type)) {
       let ingredients = this.state.ingredients;
@@ -41,7 +46,7 @@ class App extends Component {
     return (
       <div className="App">
         <Link exact='true' to='/' style={{color: 'darkgreen', textDecoration: 'none'}}><h1>SME Pizza</h1></Link>
-        <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza-btn'>Build Your Own Pizza</h2></Link> }/>
+        <Route exact path='/' render={() => <Link to='/dough' style={{textDecoration: 'none'}}><h2 className='build-pizza__btn'>Build Your Own Pizza</h2></Link> }/>
         <Route path='/dough' render={() => <Dough selectDough={this.selectDough} selectedDough={this.state.dough}/>}/>
         <Route path='/ingredients' render={() => <Ingredients selectIngredients={this.selectIngredients} selectedIngredients={this.state.ingredients}/>}/>
         <Route path='/review' render={() => <Review dough={this.state.dough} ingredients={this.state.ingredients} submit={this.submit}/>}/>

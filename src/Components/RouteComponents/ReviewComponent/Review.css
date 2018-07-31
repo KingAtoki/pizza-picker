@@ -1,4 +1,4 @@
-.order_ticket {
+.order-ticket__container {
     width: 50vw;
     height: 60vh;
     background: wheat;
@@ -8,6 +8,6 @@
     font-size: 1.6rem;
 }
 
-.order_btn:hover {
+.order-ticket__btn:hover {
     cursor: pointer;
 }

@@ -6,7 +6,7 @@
     font-size: 2.2rem;
 }
 
-.add-ingredient-btn {
+.ingredient-tile__btn_add {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,11 +18,11 @@
     font-size: 1.5rem;
 }
 
-.add-ingredient-btn:hover {
+.ingredient-tile__btn_add:hover {
     cursor: pointer;
 }
 
-.added-ingredient-btn {
+.ingredient-tile__btn_added {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +34,6 @@
     font-size: 1.5rem;
 }
 
-.added-ingredient-btn:hover {
+.ingredient-tile__btn_added:hover {
     cursor: pointer;
 }

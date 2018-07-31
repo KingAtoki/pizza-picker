@@ -6,7 +6,7 @@ export default (props) => {
   return (
     <div className='ingredient-tile'>
       {props.type}
-      {props.selectedIngredients.includes(props.type) ? <div className='added-ingredient-btn' onClick={() => props.selectIngredients(props.type)}>-</div> : <div className='add-ingredient-btn' onClick={() => props.selectIngredients(props.type)}>+</div>}
+      {props.selectedIngredients.includes(props.type) ? <div className='ingredient-tile__btn_added' onClick={() => props.selectIngredients(props.type)}>-</div> : <div className='ingredient-tile__btn_add' onClick={() => props.selectIngredients(props.type)}>+</div>}
     </div>
   )
 }

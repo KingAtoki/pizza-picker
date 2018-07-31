@@ -1,4 +1,4 @@
-.tile {
+.dough-tile {
     height: 250px;
     width: 250px;
     padding: 10px;
@@ -14,11 +14,11 @@
     color: darkgreen;
 }
 
-.tile:hover {
+.dough-tile:hover {
     box-shadow: 15px 15px 10px grey;
 }
 
-.add-dough-btn {
+.dough-tile__btn_add {
     width: 100px;
     height: 35px;
     border-radius: 10px;
@@ -29,12 +29,12 @@
     justify-content: center;
 }
 
-.add-dough-btn:hover {
+.dough-tile__btn_add:hover {
     cursor: pointer;
     background: darkred;
 }
 
-.added-btn {
+.dough-tile__btn_added {
     width: 100px;
     height: 35px;
     border-radius: 10px;

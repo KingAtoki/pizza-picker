@@ -18,12 +18,12 @@ export default (props) => {
     }
   return (
     <div>
-        <div className='order_ticket'>
+        <div className='order-ticket__container'>
             {`You want a ${props.dough} pizza with ${ingredients || 'nothing'} on top. All for a total of €${price.toFixed(2)}!`}
         </div>
         <div>
             <Link to='/ingredients' style={{color: 'crimson', textDecoration: 'none'}}><h2>No, take me back one step.</h2></Link>
-            <Link to='/' style={{color: 'crimson', textDecoration: 'none'}}><h2 className='order_btn' style={{color: 'darkgreen', textDecoration: 'none'}} onClick={() => props.submit()}>Yes that's correct!</h2></Link>
+            <Link to='/' style={{color: 'crimson', textDecoration: 'none'}}><h2 className='order-ticket__btn' style={{color: 'darkgreen', textDecoration: 'none'}} onClick={() => props.submit()}>Yes that's correct!</h2></Link>
         </div>
     </div>
   )
