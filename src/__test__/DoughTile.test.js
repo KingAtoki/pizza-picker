@@ -35,4 +35,5 @@ describe('<DoughTile />', () => {
         button.prop('onClick')();
         expect(appWrapper.state().dough).toEqual('Thick Dough');
     });
+    
 })
