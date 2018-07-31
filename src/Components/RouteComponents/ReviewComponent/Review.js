@@ -7,12 +7,14 @@ const formatIngredients = (ingredientsArray) => {
     return ingredientsArray.reduce((acc, cur) => {
         if (cur === ingredientsArray[0]) {
             return acc = acc += cur;
+        } else if (ingredientsArray.length === 2) {
+            return acc = acc + " and " + cur;
         } else if (cur === ingredientsArray[ingredientsArray.length - 1]) {
             return acc = acc.concat(", and " + cur);
         } else {
             return acc = acc.concat(", " + cur);
         }
-    }, '');
+    }, '').toLowerCase();
 }
 
 export default (props) => {

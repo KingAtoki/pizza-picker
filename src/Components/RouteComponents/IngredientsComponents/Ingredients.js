@@ -14,6 +14,7 @@ export default (props) => {
   const ingredients = fetchIngredients();
   return (
     <div>
+    <h3 style={{color: 'crimson'}}>Please select your toppings.</h3>
       <div className='ingredient__container'>
         {ingredients.map(ingredient => <div key={ingredient.id}><IngredientTile kind='ingredient' type={ingredient.type} price={ingredient.price} selectIngredients={props.selectIngredients} selectedIngredients={props.selectedIngredients}/><hr /></div>)}
         <div style={{display: 'flex', justifyContent: 'space-around'}}>
@@ -21,7 +22,7 @@ export default (props) => {
           <Link to='/review' style={{color: 'darkgreen', textDecoration: 'none'}}><h2>Review My Order</h2></Link>
         </div>
       </div>
-      <h4>All ingredients are €0.50 each.</h4>
+      <h4>All toppings are €0.50 each.</h4>
     </div>
   )
 }
